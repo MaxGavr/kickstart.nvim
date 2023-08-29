@@ -177,6 +177,14 @@ require('lazy').setup({
     },
   },
 
+  {
+    'phaazon/hop.nvim',
+    opts = {
+      multi_windows = false,
+    },
+    lazy = false,
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -361,6 +369,10 @@ require('nvim-treesitter.configs').setup {
 -- nvim-tree keymaps
 vim.keymap.set('n', '<leader>t', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle nvim-tree' })
 vim.keymap.set('n', '<leader>gt', '<cmd> NvimTreeToggle <CR>', { desc = 'Focus nvim-tree' })
+
+-- hop keymaps
+vim.keymap.set('n', ';', '<Nop>')
+vim.keymap.set('n', ';', require'hop'.hint_words, { desc = 'Hop words' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
