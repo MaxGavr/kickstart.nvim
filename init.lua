@@ -170,9 +170,11 @@ require('lazy').setup({
     dependencies = {
       'nvim-tree/nvim-web-devicons'
     },
-    config = function()
-      require('nvim-tree').setup{}
-    end,
+    opts = {
+      update_focused_file = {
+        enable = false,
+      },
+    },
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
