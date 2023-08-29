@@ -261,6 +261,9 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Window down' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Window up' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Window right' })
 
+-- Save buffer
+vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', { desc = 'Save buffer' })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
