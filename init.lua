@@ -241,6 +241,10 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Set margin to screen border when scrolling
+vim.o.scrolloff = 4
+vim.o.sidescrolloff = 4
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
