@@ -4,6 +4,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Disable netrw in favor of nvim-tree 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -157,6 +161,18 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+  },
+
+  {
+    'nvim-tree/nvim-tree.lua',
+    version = '*',
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    },
+    config = function()
+      require('nvim-tree').setup{}
+    end,
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
@@ -339,6 +355,10 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+-- nvim-tree keymaps
+vim.keymap.set('n', '<leader>t', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle nvim-tree' })
+vim.keymap.set('n', '<leader>gt', '<cmd> NvimTreeToggle <CR>', { desc = 'Focus nvim-tree' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
