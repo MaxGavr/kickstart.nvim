@@ -378,7 +378,7 @@ require('nvim-treesitter.configs').setup {
 
 -- nvim-tree keymaps
 vim.keymap.set('n', '<leader>t', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle nvim-tree' })
-vim.keymap.set('n', '<leader>gt', '<cmd> NvimTreeToggle <CR>', { desc = 'Focus nvim-tree' })
+vim.keymap.set('n', '<leader>gt', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus nvim-tree' })
 
 -- hop keymaps
 vim.keymap.set('n', ';', '<Nop>')
