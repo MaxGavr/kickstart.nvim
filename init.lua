@@ -202,7 +202,6 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
 vim.o.hlsearch = true
