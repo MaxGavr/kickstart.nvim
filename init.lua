@@ -262,6 +262,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Window right' })
 
 -- Save buffer
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', { desc = 'Save buffer' })
+vim.keymap.set('n', '<leader>s', '<cmd> w <CR>', { desc = 'Save buffer' })
+vim.keymap.set('n', '<leader><leader>s', '<cmd> wa <CR>', { desc = 'Save all buffers' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
