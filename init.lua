@@ -439,6 +439,9 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 
   nmap('<leader>m', vim.lsp.buf.format, 'Format current buffer with LSP')
+
+  -- clangd keymaps
+  nmap('<leader>o', '<cmd> ClangdSwitchSourceHeader <CR>', 'Clangd switch source header')
 end
 
 -- Enable the following language servers
