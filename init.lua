@@ -455,6 +455,7 @@ end
 local servers = {
   clangd = {},
   cmake = {},
+  gopls = {},
 
   lua_ls = {
     Lua = {
