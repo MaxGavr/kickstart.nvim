@@ -183,6 +183,11 @@ require('lazy').setup({
     lazy = false,
   },
 
+  {
+    'RRethy/vim-illuminate',
+    lazy = false,
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -538,3 +543,8 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- set vim-illuminate colors
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = "#504945" })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = "#504945" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = "#b16286" })
