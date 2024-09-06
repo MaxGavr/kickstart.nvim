@@ -188,6 +188,15 @@ require('lazy').setup({
     lazy = false,
   },
 
+  -- code outline window
+  {
+    'stevearc/aerial.nvim',
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -548,3 +557,12 @@ cmp.setup {
 vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = "#504945" })
 vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = "#504945" })
 vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = "#b16286" })
+
+require("aerial").setup({
+  on_attach = function(bufnr)
+    vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+    vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+  end,
+})
+
+vim.keymap.set("n", "<leader>O", "<cmd>AerialToggle!<CR>")
