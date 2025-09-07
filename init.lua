@@ -288,6 +288,9 @@ vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', { desc = 'Save buffer' })
 vim.keymap.set('n', '<leader>s', '<cmd> w <CR>', { desc = 'Save buffer' })
 vim.keymap.set('n', '<leader><leader>s', '<cmd> wa <CR>', { desc = 'Save all buffers' })
 
+-- Close buffer
+vim.keymap.set('n', '<leader>x', '<cmd> bd <CR>', { desc = 'Close buffer' })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
