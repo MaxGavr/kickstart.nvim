@@ -479,6 +479,8 @@ require('mason-lspconfig').setup({
   automatic_enable = true,
 })
 
+vim.lsp.enable('gdscript')
+
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
