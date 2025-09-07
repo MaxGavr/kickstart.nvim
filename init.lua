@@ -532,9 +532,6 @@ cmp.setup {
   },
 }
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
-
 -- set vim-illuminate colors
 vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = "#504945" })
 vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = "#504945" })
